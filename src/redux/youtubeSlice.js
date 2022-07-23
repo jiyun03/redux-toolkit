@@ -18,7 +18,7 @@ export const fetchYoutube = createAsyncThunk(
 // reducer
 const youtubeSlice = createSlice({
   name: "youtube",
-  initial: {
+  initialState: {
     data: [],
     isLoading: false,
   },
