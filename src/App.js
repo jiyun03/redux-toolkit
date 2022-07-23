@@ -3,8 +3,17 @@ import Header from "./components/Header";
 import Main from "./components/Main";
 import Youtube from "./components/Youtube";
 import Flickr from "./components/Flickr";
+import { fetchYoutube } from "./redux/youtubeSlice";
+import { useDispatch } from "react-redux";
+import { useEffect } from "react";
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchYoutube());
+  }, []);
+
   return (
     <main>
       <Header />
