@@ -23,6 +23,11 @@ function Header() {
             FLICKR
           </NavLink>
         </li>
+        <li>
+          <NavLink to="/members" activeStyle={style}>
+            MEMBERS
+          </NavLink>
+        </li>
       </ul>
     </header>
   );
