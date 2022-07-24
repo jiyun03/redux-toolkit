@@ -1,16 +1,16 @@
 import { useSelector } from "react-redux";
 
-function Department() {
-  const members = useSelector((store) => store.member.data);
+function Members() {
+  const members = useSelector((store) => store.members.data);
 
   return (
     <section>
-      <h1>Department</h1>
-      {members.map((mem, idx) => {
-        return <p key={idx}>{mem.name}</p>;
+      <h1>Members</h1>
+      {members.map((member) => {
+        return <p key={member.position}>{member.name}</p>;
       })}
     </section>
   );
 }
 
-export default Department;
+export default Members;

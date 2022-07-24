@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 function Main() {
   const youtube = useSelector((store) => store.youtube.data);
   const flickr = useSelector((store) => store.flickr.data);
+  const members = useSelector((store) => store.members.data);
 
   return (
     <section>
@@ -29,6 +30,15 @@ function Main() {
                 {pic.owner}
               </li>
             );
+          })}
+        </ul>
+      </article>
+      <article>
+        <h2>Members</h2>
+        <ul>
+          {members.map((member, idx) => {
+            if (idx >= 3) return;
+            return <li key={member.position}>{member.name}</li>;
           })}
         </ul>
       </article>

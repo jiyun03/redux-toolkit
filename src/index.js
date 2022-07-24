@@ -13,7 +13,7 @@ const store = configureStore({
   reducer: {
     youtube: youtubeReducer,
     flickr: flickrReducer,
-    member: memberReducer,
+    members: memberReducer,
   },
 });
 
